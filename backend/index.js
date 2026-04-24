@@ -17,6 +17,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
+app.get("/favicon.ico", (req, res) => res.status(204).end());
+
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // header et value * quels domaines peuvent acceder a notre serveur
   res.setHeader(
